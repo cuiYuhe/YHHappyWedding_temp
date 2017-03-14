@@ -1,0 +1,49 @@
+//
+//  YHHappyWedding.pch
+//  YHHappyWedding
+//
+//  Created by Cui yuhe on 17/3/13.
+//  Copyright © 2017年 Cui yuhe. All rights reserved.
+//
+
+#ifndef YHHappyWedding_pch
+#define YHHappyWedding_pch
+
+#if __OBJC__
+#import "UIView+Extension.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+
+
+
+#define WeakSelf __weak typeof(self) weakSelf = self;
+#define StrongSelf __strong __typeof(self) strongSelf = weakSelf;
+#define YHScreenW [UIScreen mainScreen].bounds.size.width
+#define YHScreenH [UIScreen mainScreen].bounds.size.height
+#define YHrgbColor(r, g, b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1];
+
+#define YHRandomColor YHrgbColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256));
+
+//自定义日志
+#ifdef DEBUG
+
+#define YHFunc NSLog(@"%s %d \n",__func__,__LINE__);
+//自定义日志
+#define YHLog(...) NSLog(@"%s %d \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__]);
+
+#else
+
+#define YHFunc
+#define YHLog(...)
+
+#endif
+#endif
+
+
+
+
+
+
+#endif /* YHHappyWedding_pch */

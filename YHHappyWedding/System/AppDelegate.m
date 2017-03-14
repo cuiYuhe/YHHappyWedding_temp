@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "YHTabBarController.h"
+#import "YHScreenPanNav.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    YHTabBarController *tabVc = [YHTabBarController new];
+    self.window.rootViewController = [[YHScreenPanNav alloc] initWithRootViewController:tabVc];
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

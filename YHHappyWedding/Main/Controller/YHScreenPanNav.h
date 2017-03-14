@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  YHScreenPanNav.h
 //  YHHappyWedding
 //
-//  Created by Cui yuhe on 17/3/13.
+//  Created by Cui yuhe on 17/3/14.
 //  Copyright © 2017年 Cui yuhe. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface YHScreenPanNav : UINavigationController
 
 @end
-
